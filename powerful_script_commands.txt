@@ -10,7 +10,7 @@
 
 ##### FFT #####
 
-build/X86/gem5.opt --outdir=m5out/weak/x86/FFT configs/example/se.py \
+build/X86/gem5.opt --outdir=m5out/powerful/x86/FFT configs/example/se.py \
 --cpu-type=X86MinorCPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
@@ -19,37 +19,55 @@ build/X86/gem5.opt --outdir=m5out/weak/x86/FFT configs/example/se.py \
 --l1i_assoc=8 \
 --l1d_size=64kB \
 --l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
 --num-cpus=2 \
 --cmd=benchmarks/x86/FFT --options="-p1 -m16"
 
 
 ##### LU #####
 
-build/X86/gem5.opt --outdir=m5out/weak/x86/LU configs/example/se.py \
+build/X86/gem5.opt --outdir=m5out/powerful/x86/LU configs/example/se.py \
 --cpu-type=X86MinorCPU \
---cpu-clock=1GHz \
+--cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
---l1i_size=8kB \
---l1i_assoc=4 \
---l1d_size=16kB \
---l1d_assoc=4 \
---num-cpus=1 \
+--l1i_size=32kB \
+--l1i_assoc=8 \
+--l1d_size=64kB \
+--l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
+--num-cpus=2 \
 --cmd=benchmarks/x86/LU --options="-p1 -n512"
 
 
 ##### RADIX #####
 
-build/X86/gem5.opt --outdir=m5out/weak/x86/RADIX configs/example/se.py \
+build/X86/gem5.opt --outdir=m5out/powerful/x86/RADIX configs/example/se.py \
 --cpu-type=X86MinorCPU \
---cpu-clock=1GHz \
+--cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
---l1i_size=8kB \
---l1i_assoc=4 \
---l1d_size=16kB \
---l1d_assoc=4 \
---num-cpus=1 \
+--l1i_size=32kB \
+--l1i_assoc=8 \
+--l1d_size=64kB \
+--l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
+--num-cpus=2 \
 --cmd=benchmarks/x86/RADIX --options="-p1 -n1048576"
 
 
@@ -59,44 +77,62 @@ build/X86/gem5.opt --outdir=m5out/weak/x86/RADIX configs/example/se.py \
 
 ##### FFT #####
 
-build/RISCV/gem5.opt --outdir=m5out/weak/RISC-V/FFT configs/example/se.py \
+build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/FFT configs/example/se.py \
 --cpu-type=RiscvMinorCPU \
---cpu-clock=1GHz \
+--cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
---l1i_size=8kB \
---l1i_assoc=4 \
---l1d_size=16kB \
---l1d_assoc=4 \
---num-cpus=1 \
+--l1i_size=32kB \
+--l1i_assoc=8 \
+--l1d_size=64kB \
+--l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
+--num-cpus=2 \
 --cmd=benchmarks/riscv/FFT --options="-p1 -m16"
 
 
 ##### LU #####
 
-build/RISCV/gem5.opt --outdir=m5out/weak/RISC-V/LU configs/example/se.py \
+build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/LU configs/example/se.py \
 --cpu-type=RiscvMinorCPU \
---cpu-clock=1GHz \
+--cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
---l1i_size=8kB \
---l1i_assoc=4 \
---l1d_size=16kB \
---l1d_assoc=4 \
---num-cpus=1 \
+--l1i_size=32kB \
+--l1i_assoc=8 \
+--l1d_size=64kB \
+--l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
+--num-cpus=2 \
 --cmd=benchmarks/riscv/LU --options="-p1 -n512"
 
 
 ##### RADIX #####
 
-build/RISCV/gem5.opt --outdir=m5out/weak/RISC-V/RADIX configs/example/se.py \
+build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/RADIX configs/example/se.py \
 --cpu-type=RiscvMinorCPU \
---cpu-clock=1GHz \
+--cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
---l1i_size=8kB \
---l1i_assoc=4 \
---l1d_size=16kB \
---l1d_assoc=4 \
---num-cpus=1 \
+--l1i_size=32kB \
+--l1i_assoc=8 \
+--l1d_size=64kB \
+--l1d_assoc=8 \
+--l2cache \
+--l2_size=2MB \
+--l2_assoc=16 \
+--l3cache \
+--l3_size=8MB \
+--l3_assoc=16 \
+--num-cpus=2 \
 --cmd=benchmarks/riscv/RADIX --options="-p1 -n1048576"
