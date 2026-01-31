@@ -11,7 +11,7 @@
 ##### FFT #####
 
 build/X86/gem5.opt --outdir=m5out/powerful/x86/FFT configs/example/se.py \
---cpu-type=X86MinorCPU \
+--cpu-type=X86O3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -26,13 +26,13 @@ build/X86/gem5.opt --outdir=m5out/powerful/x86/FFT configs/example/se.py \
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/x86/FFT --options="-p1 -m16"
+--cmd=benchmarks/x86/FFT --options="-p2 -m16"
 
 
 ##### LU #####
 
 build/X86/gem5.opt --outdir=m5out/powerful/x86/LU configs/example/se.py \
---cpu-type=X86MinorCPU \
+--cpu-type=X86O3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -47,13 +47,13 @@ build/X86/gem5.opt --outdir=m5out/powerful/x86/LU configs/example/se.py \
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/x86/LU --options="-p1 -n512"
+--cmd=benchmarks/x86/LU --options="-p2 -n512"
 
 
 ##### RADIX #####
 
 build/X86/gem5.opt --outdir=m5out/powerful/x86/RADIX configs/example/se.py \
---cpu-type=X86MinorCPU \
+--cpu-type=X86O3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -68,7 +68,7 @@ build/X86/gem5.opt --outdir=m5out/powerful/x86/RADIX configs/example/se.py \
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/x86/RADIX --options="-p1 -n1048576"
+--cmd=benchmarks/x86/RADIX --options="-p2 -n1048576"
 
 
 #####################
@@ -78,7 +78,7 @@ build/X86/gem5.opt --outdir=m5out/powerful/x86/RADIX configs/example/se.py \
 ##### FFT #####
 
 build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/FFT configs/example/se.py \
---cpu-type=RiscvMinorCPU \
+--cpu-type=RiscvO3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -93,13 +93,13 @@ build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/FFT configs/example/se.py \
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/riscv/FFT --options="-p1 -m16"
+--cmd=benchmarks/riscv/FFT --options="-p2 -m16"
 
 
 ##### LU #####
 
 build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/LU configs/example/se.py \
---cpu-type=RiscvMinorCPU \
+--cpu-type=RiscvO3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -114,13 +114,13 @@ build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/LU configs/example/se.py \
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/riscv/LU --options="-p1 -n512"
+--cmd=benchmarks/riscv/LU --options="-p2 -n512"
 
 
 ##### RADIX #####
 
 build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/RADIX configs/example/se.py \
---cpu-type=RiscvMinorCPU \
+--cpu-type=RiscvO3CPU \
 --cpu-clock=4GHz \
 --cacheline_size=64 \
 --caches \
@@ -135,4 +135,4 @@ build/RISCV/gem5.opt --outdir=m5out/powerful/RISC-V/RADIX configs/example/se.py 
 --l3_size=8MB \
 --l3_assoc=16 \
 --num-cpus=2 \
---cmd=benchmarks/riscv/RADIX --options="-p1 -n1048576"
+--cmd=benchmarks/riscv/RADIX --options="-p2 -n1048576"
