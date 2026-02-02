@@ -73,9 +73,9 @@ class L2Cache(Cache):
 
 class L3Cache(Cache):
     assoc: int = 16
-    tag_latency: int = 20
-    data_latency: int = 20
-    response_latency: int = 20
+    tag_latency: int = 24
+    data_latency: int = 24
+    response_latency: int = 24
     mshrs: int = 512
     tgts_per_mshr: int = 20
     write_buffers: int = 256
